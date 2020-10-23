@@ -9,7 +9,7 @@ Elk-Stack Deployment Automation.
 I used files in this repisotory to configure the network depicted below:
 
 
-
+https://github.com/actavivis125/elk-stack-project/blob/main/ELK.png?raw=true
 
 
 
