@@ -81,10 +81,49 @@ The ELK VM exposes an Elastic Stack instance. Docker is used to download and man
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because this allows for easy replication and portability.
 
-The Ansible playbook implements the following tasks: Installing Docker, Installing pip3, Installing the Docker Python Module, Setting the system memory necessary for this machine to work properly, and Downloading and launching a Docker ELK container
+The Ansible playbook implements the following tasks: Installing Docker, Installing pip3, Installing the Docker Python Module, Setting the system memory necessary for this machine to work properly, and Downloading and launching a Docker ELK container.
 
-The Ansible playbook can be found in the YAML file elk.yml in this repo, and is also included here for convenience
+The Ansible playbook can be found in the YAML file elk.yml in this repo, and is also included here for convenience.
 
+ELK configuration with .yml file:
 
+```
+---
+- name: Configure Elk VM with Docker
+  hosts: elk
+  remote_user: azureuser
+  become: true
+  tasks:
+    # Use apt module
+    - name: Install docker.io
+      apt:
+        update_cache: yes
+        force_apt_get: yes
+        name: docker.io
+        state: present
 
+      # Use apt module
+    - name: Install python3-pip
+      apt:
+        force_apt_get: yes
+        name: python3-pip
+        state: present
 
+      # Use pip module (It will default to pip3)
+    - name: Install Docker module
+      pip:
+        name: docker
+        state: present
+
+      # Use command module
+    - name: Increase virtual memory
+      command: sysctl -w vm.max_map_count=262144
+
+      # Use sysctl module
+    - name: use sysctl to increase memory VM
+      sysctl:
+        name: vm.max_map_count
+        value: "262144"
+
+> 
+```
