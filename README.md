@@ -10,7 +10,8 @@ Elk-Stack Deployment Automation.
 I used files in this repisotory to configure the network depicted below:
 
 
-https://github.com/actavivis125/elk-stack-project/blob/main/ELK.png?raw=true
+![ELK](https://user-images.githubusercontent.com/73254593/97062762-358e8900-1551-11eb-9def-432dda6d2302.png)
+
 
 
 
@@ -22,7 +23,7 @@ This document contains the following details: Description of the Topology, Acces
 
 
 
-Topology Description:
+### Topology Description:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA (the Damn Vulnerable Web Application).
 
@@ -30,8 +31,10 @@ Load balancing ensures the application will be highly available, while restricti
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file system.
 
+#### Filebeat:
 -Filebeat monitors the log files or locations specified, collects log events, and forwards them for indexing.
 
+##### Metricbeat:
 -Metricbeat records system and application metrics. It allows for viewing cpu,memory,disk, and network metrics, in addition to also allowing monitoring for apache, docker, and other applications installed.
 
 The configuration details of each machine may be found below. Note: Use the Markdown Table Generator to add/remove values from the table.
