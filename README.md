@@ -72,3 +72,19 @@ In addition to the above, Azure has provisioned a load balancer in front of all 
 
 Availability Zone 1: Web-1 + Web-2 Availability Zone 2: ELK
 
+
+
+
+# ELK Configuration
+
+The ELK VM exposes an Elastic Stack instance. Docker is used to download and manage an ELK container.
+
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because this allows for easy replication and portability.
+
+The Ansible playbook implements the following tasks: Installing Docker, Installing pip3, Installing the Docker Python Module, Setting the system memory necessary for this machine to work properly, and Downloading and launching a Docker ELK container
+
+The Ansible playbook can be found in the YAML file elk.yml in this repo, and is also included here for convenience
+
+
+
+
