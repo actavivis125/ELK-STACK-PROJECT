@@ -144,3 +144,31 @@ ELK configuration with .yml file:
 
 This screenshot displays the result of running `docker ps` after successfully configuring the ELK instance:
 <img width="1414" alt="Screen Shot 2020-10-23 at 18 27 44" src="https://user-images.githubusercontent.com/73254593/97064798-91f7a580-155d-11eb-8e15-fad2dfcdd380.png">
+
+
+## Target Machines and Beats.
+
+
+In order to use the playbook, you will need to have an Ansible control node already configured. After you have such a control node set up, we will need to perform the following steps: -Copy the playbooks to the Ansible Control Node -Run each playbook on the appropriate targets
+
+SSH into the control node (Docker Anisble container on the JumpBox) and follow the steps below:
+
+The easiest way to copy the playbooks is to use Git:
+```
+$ cd /etc/ansible
+$ mkdir files
+$ git clone https://github.com/actavivis125/elk-stack-project.git
+```
+
+#Move Playbooks and hosts file Into `/etc/ansible`
+
+```
+$ cp elk-stack-project/playbooks/* .
+$ cp elk-stack-project/files/* ./files
+```
+
+
+
+
+
+
