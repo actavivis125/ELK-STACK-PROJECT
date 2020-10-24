@@ -139,7 +139,8 @@ ELK configuration with .yml file:
           -  5044:5044
           -  5601:5601
 
-
-
 > 
 ```
+
+This screenshot displays the result of running `docker ps` after successfully configuring the ELK instance:
+<img width="1414" alt="Screen Shot 2020-10-23 at 18 27 44" src="https://user-images.githubusercontent.com/73254593/97064798-91f7a580-155d-11eb-8e15-fad2dfcdd380.png">
