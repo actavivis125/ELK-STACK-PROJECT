@@ -23,6 +23,8 @@ This document contains the following details: Description of the Topology, Acces
 
 
 
+
+
 ### Topology Description:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA (the Damn Vulnerable Web Application).
@@ -37,4 +39,34 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 ##### Metricbeat:
 -Metricbeat records system and application metrics. It allows for viewing cpu,memory,disk, and network metrics, in addition to also allowing monitoring for apache, docker, and other applications installed.
 
-The configuration details of each machine may be found below. Note: Use the Markdown Table Generator to add/remove values from the table.
+The configuration details of each machine may be found below. 
+
+| Name                	| Function   	| IP Address  	| Operating System 	|
+|---------------------	|------------	|-------------	|------------------	|
+| JumpBox Provisioner 	| Gateway    	| 10.0.0.7    	| Linux            	|
+| DVWA 1              	| Web Server 	| 10.0.0.12   	| Linux            	|
+| DVWA 2              	| Web Server 	| 10.0.0.13   	| Linux            	|
+| ELK                 	| Monitoring 	| 10.2.0.5    	| Linux            	|
+
+
+## Access Policies
+
+The machines on the internal network are not exposed to the public Internet.
+
+Only the JumpBox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: My public IP
+
+Machines within the network can only be accessed by each other. The DVWA machines (Web-1 and Web-2) can send traffic to the ELK-Server
+
+A summary of the access policies in place can be found in the table below:
+
+
+
+| Name       	| Public Access 	| Allowed IPs' 	|
+|------------	|---------------	|--------------	|
+| JumpBox    	| Yes           	| My Public IP 	|
+| ELK-server 	| No            	| 10.2.0.1-16  	|
+| DVWA 1     	| No            	| 10.0.0.1-16  	|
+| DVWA 2     	| No            	| 10.0.0.1-16  	|
+
+
+
