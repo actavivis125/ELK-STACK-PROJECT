@@ -167,7 +167,24 @@ $ cp elk-stack-project/playbooks/* .
 $ cp elk-stack-project/files/* ./files
 ```
 
+After this we run the Ansible playbook:
 
+```
+$ cd /etc/ansible
+$ ansible-playbook elk.yml
+$ ansible-playbook filebeat-playbook.yml webservers
+$ ansible-playbook metricbeat-playbook.yml webservers
+```
+
+To verify success, wait five minutes to give ELK time to start up.
+
+Then, navigate to the public IP of your ELK Server machine using port 5601. An example would be entering 0.0.0.0:5601 in your web browser. This should take you to the Kibana home screen.
+
+To ensure filebeat is working properly, from your ELK Server home page (Kibana) click on Add Log Data then choose System Logs. Then you simply have to scroll to the page bottom and click Check Data. If all is well, it will display "Data successfully received from this module"
+
+If this is not the case, you likely need to add a filebeat configuration file and add your ELK Server IP address in this config.
+
+From back on your Ansible container on the JumpBox:
 
 
 
