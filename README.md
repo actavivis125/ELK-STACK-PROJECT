@@ -124,6 +124,22 @@ ELK configuration with .yml file:
       sysctl:
         name: vm.max_map_count
         value: "262144"
+        reload: yes
+
+      # Use docker_container module
+    - name: download and launch a docker elk container
+      docker_container:
+        name: elk
+        image: sebp/elk:761
+        state: started
+        restart_policy: always
+        # Please list the ports that ELK runs on
+        published_ports:
+          -  9200:9200
+          -  5044:5044
+          -  5601:5601
+
+
 
 > 
 ```
