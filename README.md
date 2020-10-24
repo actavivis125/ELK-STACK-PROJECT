@@ -68,5 +68,7 @@ A summary of the access policies in place can be found in the table below:
 | DVWA 1     	| No            	| 10.0.0.1-16  	|
 | DVWA 2     	| No            	| 10.0.0.1-16  	|
 
+In addition to the above, Azure has provisioned a load balancer in front of all machines except for the jump box. The load balancer's targets are organized into the following availability zones:
 
+Availability Zone 1: Web-1 + Web-2 Availability Zone 2: ELK
 
