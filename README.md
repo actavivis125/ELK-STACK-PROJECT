@@ -236,6 +236,11 @@ Make sure the parts of the file specified below match this (or whatever IPs you 
 #Array of hosts to connect to. hosts: ["10.2.0.5:9200"] username: "elastic" password: "changeme"
 
 
+<img width="1436" alt="Screen Shot 2020-10-23 at 17 54 01" src="https://user-images.githubusercontent.com/73254593/97065973-1f3ef800-1566-11eb-8a26-a7a9b5d0703a.png">
+
+<img width="1086" alt="Screen Shot 2020-10-17 at 13 34 58" src="https://user-images.githubusercontent.com/73254593/97065979-2e25aa80-1566-11eb-8b61-323b7717f6fe.png">
+
+
 ` Congratulations! You have an ELK Stack Server monitoring system logs on two web servers with filebeat and metrics with metricbeat. 
 If you have any issues/questions let me know, and I will try my best to help! `
 
